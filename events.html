@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Upcoming Events</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://vanhackblobstorageprod.blob.core.windows.net/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="javascript-project/events.css" rel="stylesheet">
+</head>
+<body onload="renderEvents()">
+<div class="w-100 h-100 section">
+    <div class="topbar"></div>
+    <div class="section__header w-100 d-flex justify-content-between align-items-center">
+        <div class="header">Upcoming Events</div>
+    </div>
+    <div class="w-100 h-100 event-container">
+
+    </div>
+    <div class="modal modal-details d-none justify-content-center align-items-center">
+        <div class="details-popup">
+            <div class="details-popup__header d-flex justify-content-between">
+                <div class="header">Header</div>
+                <button class="modal-close" onclick="closeDetails()"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="details-popup__content">
+                Content
+            </div>
+            <div class="details-popup__footer d-flex justify-content-between align-items-center">
+                <div class="apply-button">
+                    <button type="button" class="button">Apply</button>
+                </div>
+                <div class="social-icons d-flex align-items-center">
+                    <a class="icon twitter mr-2 d-flex justify-content-center align-items-center"
+                       target="_top">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="icon icon-square linkedin mr-2 d-flex justify-content-center align-items-center"
+                       target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a class="icon facebook d-flex justify-content-center align-items-center"
+                       target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-warning d-none justify-content-center align-items-center">
+        <div class="warning-popup">
+            <div class="warning-popup__header d-flex justify-content-between">
+                <div class="header">Buy Membership</div>
+                <button class="modal-close" onclick="closeWarning()"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="warning-popup__content">
+                This is a premium webinar only open for members. Would you like to buy the membership?
+            </div>
+            <div class="warning-popup__footer d-flex justify-content-end align-items-center">
+                <div class="apply-button mr-2">
+                    <button type="button" class="button button-cancel" onclick="closeWarning()">Cancel</button>
+                </div>
+                <div class="apply-button mr-2">
+                    <button type="button" class="button button-buy">Buy Membership</button>
+                </div>
+                <div class="apply-button">
+                    <button type="button" class="button button-read">Read more about premium events</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="apply-popup d-none justify-content-between">
+        You have successfully enrolled for&nbsp;
+    </div>
+</div>
+<template id="eventTypeCard">
+    <div class="event-list">
+        <div class="event-list-header">
+
+        </div>
+        <div class="events d-flex">
+
+        </div>
+    </div>
+</template>
+<template id="eventsCard">
+    <div class="card">
+        <div class="d-flex card-header">
+            <div class="font-18 header"></div>
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="apply-button">
+                <button type="button" class="button">Apply</button>
+            </div>
+            <div class="social-icons d-flex align-items-center">
+                <a class="icon twitter mr-2 d-flex justify-content-center align-items-center"
+                   target="_top">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon icon-square linkedin mr-2 d-flex justify-content-center align-items-center"
+                   target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a class="icon facebook d-flex justify-content-center align-items-center"
+                   target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</template>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.19/lodash.js"></script>
+<script src="https://use.fontawesome.com/6295cd7a82.js"></script>
+<script src="javascript-project/events.js"></script>
+</body>
+</html>
